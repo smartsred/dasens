@@ -6,7 +6,7 @@ import { MapPin, Mail, Linkedin } from "lucide-react";
 const ContactUs = () => {
 
   return (
-    <section id="contact" className="py-24 bg-white dark:bg-black">
+    <section id="contact" className="py-24 bg-gradient-to-b from-white via-white to-white dark:from-mint dark:via-black dark:to-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
@@ -69,12 +69,10 @@ const ContactUs = () => {
               </h3>
               <div className="space-y-2">
                 <p className="text-muted-foreground text-sm">
-                  <span className="font-semibold text-mint-selected">InventGenie</span> - AI-powered
-                  innovation management
+                  <span className="font-semibold text-mint-selected">InventGenie</span> - AI-powered patent drafting platform that transforms ideas into ready-to-file patent applications. From concept to IP, instantly.
                 </p>
                 <p className="text-muted-foreground text-sm">
-                  <span className="font-semibold text-mint-selected">SmartsRED</span> - Smart renewable
-                  energy devices
+                  <span className="font-semibold text-mint-selected">SmartSRED</span> - AI-powered SR&ED tax credit platform that streamlines claims, maximizes returns, and ensures audit-ready compliance for Canadian companies.
                 </p>
               </div>
             </div>

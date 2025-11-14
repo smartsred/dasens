@@ -51,18 +51,22 @@ html.dark body {
 
 /* Force dark mode gradients - from mint via white to white */
 .dark section[id="about"],
-.dark section[id="services"],
 .dark section[id="innovation-support"] {
   background: linear-gradient(to bottom, #7FB4B4, #000000, #000000) !important;
+}
+
+/* Force dark mode gradients - from black to mint (for smooth transition from innovation-support) */
+.dark section[id="services"] {
+  background: linear-gradient(to bottom, #000000, #000000, #7FB4B4) !important;
 }
 
 .dark footer {
   background: linear-gradient(to bottom, #000000, #000000, #7FB4B4) !important;
 }
 
-/* Force dark mode for contact section */
+/* Force dark mode gradient for contact section - starts mint to match services, transitions to black */
 .dark section[id="contact"] {
-  background: #000000 !important;
+  background: linear-gradient(to bottom, #7FB4B4, #000000, #000000) !important;
 }
 
 /* Force dark mode for all cards and divs with white backgrounds */

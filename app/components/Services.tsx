@@ -54,7 +54,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-mint via-white to-white dark:from-mint dark:via-black dark:to-black">
+    <section id="services" className="py-24 bg-gradient-to-b from-white via-white to-mint dark:from-mint dark:via-black dark:to-mint">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
@@ -62,8 +62,9 @@ const Services = () => {
           </h2>
           <p className="text-lg text-foreground/90 max-w-3xl mx-auto leading-relaxed font-medium">
             We help organizations innovate smarter, combining technical depth with strategic insight. 
-            Through our ventures <span className="font-semibold text-mint-selected">InventGenie</span> and{" "}
-            <span className="font-semibold text-mint-selected">SmartSRED</span>, we provide AI-powered solutions 
+            Through our ventures{" "}
+            <span className="font-semibold text-mint dark:text-mint">InventGenie</span> and{" "}
+            <span className="font-semibold text-mint dark:text-mint">SmartSRED</span>, we provide AI-powered solutions 
             for patent drafting and SR&ED tax credit optimization, alongside comprehensive R&D and engineering services.
           </p>
         </div>
