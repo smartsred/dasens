@@ -25,7 +25,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-mint via-white to-white">
+    <section id="about" className="py-24 bg-gradient-to-b from-mint via-white to-white dark:from-mint dark:via-black dark:to-black">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
@@ -43,7 +43,7 @@ const About = () => {
             ideas into scalable solutions that create measurable impact through cutting-edge AI technology 
             and deep domain expertise.
           </p>
-          <div className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2">
+          <div className="bg-white dark:bg-black shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2">
             <p className="font-semibold text-lg text-foreground">
               <span className="text-mint-selected">Mission:</span> To accelerate global innovation by
               bridging research, technology, and sustainable industrial practice through AI-powered 
@@ -60,7 +60,7 @@ const About = () => {
             {focusAreas.map((area, index) => (
               <div
                 key={index}
-                className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2"
+                className="bg-white dark:bg-black shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2"
               >
                 <area.icon className="w-12 h-12 text-mint-selected mb-4" />
                 <h4 className="font-heading text-lg font-bold text-card-foreground mb-2">

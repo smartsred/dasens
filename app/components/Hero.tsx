@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 bg-gradient-to-b from-white via-white to-mint"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 bg-gradient-to-b from-white via-white to-mint dark:from-black dark:via-black dark:to-mint"
     >
       {/* Content */}
       <div className="container mx-auto px-4 text-center">
@@ -61,12 +61,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-mint/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-mint/50 rounded-full mt-2"></div>
-        </div>
-      </div>
     </section>
   );
 };

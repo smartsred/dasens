@@ -54,7 +54,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-mint via-white to-white">
+    <section id="services" className="py-24 bg-gradient-to-b from-mint via-white to-white dark:from-mint dark:via-black dark:to-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
@@ -72,7 +72,7 @@ const Services = () => {
           {serviceCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg p-8 rounded-lg transition-transform duration-300 hover:-translate-y-2"
+              className="bg-white dark:bg-black shadow-lg p-8 rounded-lg transition-transform duration-300 hover:-translate-y-2"
             >
               <category.icon className="w-12 h-12 text-mint-selected mb-6" />
               <h3 className="font-heading text-xl font-bold text-card-foreground mb-4">

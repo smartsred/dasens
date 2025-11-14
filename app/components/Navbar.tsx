@@ -1,13 +1,21 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { Button } from "@/app/components/ui/button";
-import { Menu, X } from "lucide-react";
-import dasensLogo from "@/app/assets/dasensai_logo.jpeg";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import dasensLogo from "@/app/assets/dasensai_logo.png";
+import dasensLogoWhite from "@/app/assets/dasensai_logo_white.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +43,9 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white backdrop-blur-md shadow-md" : "bg-white"
+        isScrolled 
+          ? "bg-white dark:bg-black backdrop-blur-md shadow-md" 
+          : "bg-white dark:bg-black"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
@@ -45,7 +55,7 @@ const Navigation = () => {
             className="flex items-center hover:opacity-80 transition-opacity"
           >
             <img 
-              src={dasensLogo.src} 
+              src={mounted && theme === "dark" ? dasensLogoWhite.src : dasensLogo.src} 
               alt="Dasens - AI Powered Innovation Assistant" 
               className="h-14 md:h-16 w-auto"
             />
@@ -57,22 +67,36 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-foreground hover:text-mint-selected transition-colors font-medium"
+                className="text-foreground dark:text-white hover:text-mint-selected dark:hover:text-mint transition-colors font-medium"
               >
                 {link.label}
               </button>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </Button>
+          {/* Theme Toggle and Mobile Menu Button */}
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              aria-label="Toggle theme"
+            >
+              {mounted && theme === "dark" ? (
+                <Sun className="w-5 h-5" />
+              ) : (
+                <Moon className="w-5 h-5" />
+              )}
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -82,7 +106,7 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-foreground hover:text-mint-selected transition-colors font-medium text-left"
+                className="text-foreground dark:text-white hover:text-mint-selected dark:hover:text-mint transition-colors font-medium text-left"
               >
                 {link.label}
               </button>

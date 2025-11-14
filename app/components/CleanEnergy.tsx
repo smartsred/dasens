@@ -25,7 +25,7 @@ const CleanEnergy = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-white to-mint">
+    <section id="clean-energy" className="py-24 bg-gradient-to-b from-white via-white to-mint dark:from-black dark:via-black dark:to-mint">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
@@ -48,7 +48,7 @@ const CleanEnergy = () => {
             {impactAreas.map((area, index) => (
               <div
                 key={index}
-                className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2 text-center"
+                className="bg-white dark:bg-black shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2 text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-mint/10 mb-4">
                   <area.icon className="w-8 h-8 text-mint-selected" />

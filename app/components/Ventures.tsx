@@ -24,7 +24,7 @@ const Ventures = () => {
   ];
 
   return (
-    <section id="ventures" className="py-24 bg-gradient-to-b from-white via-white to-mint">
+    <section id="ventures" className="py-24 bg-gradient-to-b from-white via-white to-mint dark:from-black dark:via-black dark:to-mint">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
@@ -45,7 +45,7 @@ const Ventures = () => {
               className="block"
             >
               <Card
-                className="border-0 shadow-lg transition-transform duration-300 bg-white hover:-translate-y-2 cursor-pointer h-full group"
+                className="border-0 shadow-lg transition-transform duration-300 bg-white dark:bg-black hover:-translate-y-2 cursor-pointer h-full group"
               >
                 <CardHeader>
                   <div className="flex flex-col items-center mb-6">
@@ -60,7 +60,7 @@ const Ventures = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center justify-center gap-2 text-mint-selected-hover font-medium group-hover:text-mint-selected-button-hover transition-colors">
+                  <div className="flex items-center justify-center gap-2 text-mint-hover font-medium group-hover:text-mint-button-hover transition-colors">
                     <span>Visit Website</span>
                     <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>

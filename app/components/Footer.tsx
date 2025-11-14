@@ -1,11 +1,21 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { Linkedin, Mail, MapPin } from "lucide-react";
-import dasensLogo from "@/app/assets/dasensai_logo.jpeg";
+import dasensLogo from "@/app/assets/dasensai_logo.png";
+import dasensLogoWhite from "@/app/assets/dasensai_logo_white.png";
 import inventGenieLogo from "@/app/assets/inventgenie_logo.png";
 import smartSREDLogo from "@/app/assets/smartsred_logo.png";
 
 const Footer = () => {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -27,7 +37,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-white via-white to-mint text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-b from-white via-white to-mint dark:from-black dark:via-black dark:to-mint text-white relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-64 h-64 bg-mint rounded-full blur-3xl"></div>
@@ -35,7 +45,7 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo and Brand */}
           <div className="space-y-4">
             <button
@@ -43,7 +53,7 @@ const Footer = () => {
               className="flex items-center hover:opacity-90 transition-opacity group"
             >
               <img 
-                src={dasensLogo.src} 
+                src={mounted && theme === "dark" ? dasensLogoWhite.src : dasensLogo.src} 
                 alt="Dasens - AI Powered Innovation Assistant" 
                 className="h-16 w-auto"
               />
@@ -66,29 +76,6 @@ const Footer = () => {
                     <span className="w-1 h-1 rounded-full bg-mint/40 group-hover:bg-mint transition-colors"></span>
                     {link.label}
                   </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Ventures */}
-          <div>
-            <h3 className="font-bold text-lg mb-4 text-foreground">Our Ventures</h3>
-            <ul className="space-y-4">
-              {ventures.map((venture, index) => (
-                <li key={index}>
-                  <a
-                    href={venture.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-start hover:opacity-80 transition-opacity"
-                  >
-                    <img 
-                      src={venture.logo.src} 
-                      alt={`${venture.name} logo`}
-                      className={venture.name === "InventGenie" ? "h-9 w-auto" : "h-8 w-auto"}
-                    />
-                  </a>
                 </li>
               ))}
             </ul>

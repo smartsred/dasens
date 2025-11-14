@@ -24,11 +24,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #000000;
+  --foreground: #ededed;
 }
 
 body {
@@ -38,6 +36,79 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+html.dark body {
+  background: #000000;
+}
+
+/* Force dark mode gradients - from white via white to mint */
+.dark section[id="hero"],
+.dark section[id="ventures"],
+.dark section[id="clean-energy"] {
+  background: linear-gradient(to bottom, #000000, #000000, #7FB4B4) !important;
+}
+
+/* Force dark mode gradients - from mint via white to white */
+.dark section[id="about"],
+.dark section[id="services"],
+.dark section[id="innovation-support"] {
+  background: linear-gradient(to bottom, #7FB4B4, #000000, #000000) !important;
+}
+
+.dark footer {
+  background: linear-gradient(to bottom, #000000, #000000, #7FB4B4) !important;
+}
+
+/* Force dark mode for contact section */
+.dark section[id="contact"] {
+  background: #000000 !important;
+}
+
+/* Force dark mode for all cards and divs with white backgrounds */
+.dark div.bg-white.shadow-lg,
+.dark div[class*="bg-white"][class*="shadow-lg"],
+.dark .bg-white.dark\:bg-black,
+.dark .bg-white.dark\:bg-gray-900 {
+  background-color: #000000 !important; /* black */
+}
+
+/* Make all container and wrapper divs transparent in dark mode to match section backgrounds */
+.dark section .container {
+  background-color: transparent !important;
+}
+
+/* Ensure divs without explicit background classes are transparent */
+.dark section div:not([class*="bg-white"]):not([class*="bg-gray"]):not([class*="bg-mint"]):not([class*="bg-black"]):not([class*="shadow-lg"]) {
+  background-color: transparent !important;
+}
+
+/* Force all gray backgrounds to black in dark mode */
+.dark [class*="bg-gray"] {
+  background-color: #000000 !important;
+}
+
+/* Force navbar colors in dark mode */
+.dark nav {
+  background-color: #000000 !important;
+}
+
+.dark nav button:not([class*="bg-"]):not([class*="text-mint"]),
+.dark nav .text-foreground {
+  color: #ffffff !important;
+}
+
+.dark nav button:hover:not([class*="bg-"]),
+.dark nav .text-foreground:hover {
+  color: #7FB4B4 !important;
+}
+
+.dark nav svg {
+  color: #ffffff !important;
+}
+
+.dark nav button:hover svg {
+  color: #7FB4B4 !important;
 }
 
 .page-gradient {

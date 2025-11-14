@@ -6,7 +6,7 @@ import { MapPin, Mail, Linkedin } from "lucide-react";
 const ContactUs = () => {
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-24 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
@@ -21,7 +21,7 @@ const ContactUs = () => {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2">
+            <div className="bg-white dark:bg-black shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2">
               <h3 className="font-heading text-xl font-bold text-card-foreground mb-6">
                 Contact Information
               </h3>
@@ -63,7 +63,7 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2">
+            <div className="bg-white dark:bg-black shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2">
               <h3 className="font-heading text-xl font-bold text-card-foreground mb-4">
                 Our Ventures
               </h3>
@@ -81,7 +81,7 @@ const ContactUs = () => {
           </div>
 
           {/* Contact Message */}
-          <div className="bg-white shadow-lg p-8 rounded-lg transition-transform duration-300 hover:-translate-y-2">
+          <div className="bg-white dark:bg-black shadow-lg p-8 rounded-lg transition-transform duration-300 hover:-translate-y-2">
             <h3 className="font-heading text-xl font-bold text-card-foreground mb-4">
               Get in Touch
             </h3>
