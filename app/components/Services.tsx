@@ -19,7 +19,7 @@ const Services = () => {
       icon: FileText,
       services: [
         "Grant and Proposal Writing",
-        "R&D Tax Credit (SR&ED) Support",
+        "R&D Tax Credit (SR&ED) Support via SmartSRED",
         "Technical Documentation and Roadmapping",
       ],
     },
@@ -38,6 +38,7 @@ const Services = () => {
       title: "Intellectual Property & Product Development",
       icon: Lightbulb,
       services: [
+        "AI-Powered Patent Drafting via InventGenie",
         "Patent Strategy and IP Management",
         "Prototype and Proof-of-Concept Design",
         "Technology Commercialization",
@@ -60,7 +61,10 @@ const Services = () => {
             R&D and Engineering Services
           </h2>
           <p className="text-lg text-foreground/90 max-w-3xl mx-auto leading-relaxed font-medium">
-            We help organizations innovate smarter — combining technical depth with strategic insight.
+            We help organizations innovate smarter, combining technical depth with strategic insight. 
+            Through our ventures <span className="font-semibold text-mint-selected">InventGenie</span> and{" "}
+            <span className="font-semibold text-mint-selected">SmartSRED</span>, we provide AI-powered solutions 
+            for patent drafting and SR&ED tax credit optimization, alongside comprehensive R&D and engineering services.
           </p>
         </div>
 
@@ -68,9 +72,9 @@ const Services = () => {
           {serviceCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-white/20 backdrop-blur-sm p-8 rounded-lg border border-mint/20 hover:border-mint/40 transition-all duration-300"
+              className="bg-white shadow-lg p-8 rounded-lg transition-transform duration-300 hover:-translate-y-2"
             >
-              <category.icon className="w-12 h-12 text-mint mb-6" />
+              <category.icon className="w-12 h-12 text-mint-selected mb-6" />
               <h3 className="font-heading text-xl font-bold text-card-foreground mb-4">
                 {category.title}
               </h3>

@@ -45,7 +45,7 @@ const Ventures = () => {
               className="block"
             >
               <Card
-                className="border-0 hover:border-2 hover:border-mint/40 transition-all duration-300 bg-white hover:-translate-y-2 cursor-pointer h-full group"
+                className="border-0 shadow-lg transition-transform duration-300 bg-white hover:-translate-y-2 cursor-pointer h-full group"
               >
                 <CardHeader>
                   <div className="flex flex-col items-center mb-6">
@@ -60,7 +60,7 @@ const Ventures = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center justify-center gap-2 text-mint-hover font-medium group-hover:text-mint-button-hover transition-colors">
+                  <div className="flex items-center justify-center gap-2 text-mint-selected-hover font-medium group-hover:text-mint-selected-button-hover transition-colors">
                     <span>Visit Website</span>
                     <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>

@@ -21,13 +21,13 @@ const ContactUs = () => {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="bg-white/20 backdrop-blur-sm p-6 rounded-lg border border-mint/20">
+            <div className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2">
               <h3 className="font-heading text-xl font-bold text-card-foreground mb-6">
                 Contact Information
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <MapPin className="w-5 h-5 text-mint mt-1 shrink-0" />
+                  <MapPin className="w-5 h-5 text-mint-selected mt-1 shrink-0" />
                   <div>
                     <p className="font-semibold text-foreground">Headquarters</p>
                     <p className="text-muted-foreground text-sm">Calgary, Alberta, Canada</p>
@@ -35,26 +35,26 @@ const ContactUs = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Mail className="w-5 h-5 text-mint mt-1 shrink-0" />
+                  <Mail className="w-5 h-5 text-mint-selected mt-1 shrink-0" />
                   <div>
                     <p className="font-semibold text-foreground">Email</p>
                     <a
                       href="mailto:info@inventgenie.com"
-                      className="text-mint hover:underline text-sm"
+                      className="text-mint-selected hover:underline text-sm"
                     >
                       info@inventgenie.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Linkedin className="w-5 h-5 text-mint mt-1 shrink-0" />
+                  <Linkedin className="w-5 h-5 text-mint-selected mt-1 shrink-0" />
                   <div>
                     <p className="font-semibold text-foreground">Connect</p>
                     <a
                       href="https://www.linkedin.com/in/simonpark007/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-mint hover:underline text-sm"
+                      className="text-mint-selected hover:underline text-sm"
                     >
                       Simon Park - LinkedIn
                     </a>
@@ -63,17 +63,17 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="bg-white/20 backdrop-blur-sm p-6 rounded-lg border border-mint/20">
+            <div className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2">
               <h3 className="font-heading text-xl font-bold text-card-foreground mb-4">
                 Our Ventures
               </h3>
               <div className="space-y-2">
                 <p className="text-muted-foreground text-sm">
-                  <span className="font-semibold text-mint">InventGenie</span> - AI-powered
+                  <span className="font-semibold text-mint-selected">InventGenie</span> - AI-powered
                   innovation management
                 </p>
                 <p className="text-muted-foreground text-sm">
-                  <span className="font-semibold text-mint">SmartsRED</span> - Smart renewable
+                  <span className="font-semibold text-mint-selected">SmartsRED</span> - Smart renewable
                   energy devices
                 </p>
               </div>
@@ -81,7 +81,7 @@ const ContactUs = () => {
           </div>
 
           {/* Contact Message */}
-          <div className="bg-white/20 backdrop-blur-sm p-8 rounded-lg border border-mint/20">
+          <div className="bg-white shadow-lg p-8 rounded-lg transition-transform duration-300 hover:-translate-y-2">
             <h3 className="font-heading text-xl font-bold text-card-foreground mb-4">
               Get in Touch
             </h3>

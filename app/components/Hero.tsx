@@ -26,10 +26,11 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-foreground/90 max-w-3xl mx-auto leading-relaxed font-medium">
-            Dasens is a global research and technology group focused on R&D excellence,
-            intellectual property, and advanced engineering consulting. We drive innovation across
-            industries — from smart sensors and clean energy to oil & gas, industrial systems, and
-            digital technologies.
+            Dasens is the parent company behind <span className="font-semibold text-mint-selected">InventGenie</span>, 
+            an AI-powered patent drafting platform that transforms ideas into ready-to-file patent applications, 
+            and <span className="font-semibold text-mint-selected">SmartSRED</span>, an AI-powered SR&ED tax credit platform 
+            that streamlines claims, maximizes returns, and ensures audit-ready compliance for Canadian companies. 
+            We drive innovation through R&D excellence, intellectual property, and advanced engineering consulting.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">

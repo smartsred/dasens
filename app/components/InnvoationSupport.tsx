@@ -32,9 +32,10 @@ const InnovationSupport = () => {
             Fueling R&D Success
           </h2>
           <p className="text-lg text-foreground/90 leading-relaxed font-medium">
-            Innovation doesn't stop at ideas — it's built through systems. Using{" "}
-            <span className="font-semibold text-mint">InventGenie</span>, we help organizations
-            manage R&D, optimize tax credits, and strengthen intellectual property portfolios —
+            Innovation doesn't stop at ideas, it's built through systems. Using{" "}
+            <span className="font-semibold text-mint-selected">InventGenie</span>, an AI-powered patent drafting 
+            platform that transforms ideas into ready-to-file patent applications. From concept to IP, instantly. 
+            We help organizations manage R&D, optimize tax credits, and strengthen intellectual property portfolios, 
             turning research into long-term value.
           </p>
         </div>
@@ -43,10 +44,10 @@ const InnovationSupport = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white/20 backdrop-blur-sm p-6 rounded-lg border border-mint/20 hover:border-mint/40 transition-all duration-300 text-center"
+              className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2 text-center"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-mint/10 mb-4">
-                <feature.icon className="w-8 h-8 text-mint" />
+                <feature.icon className="w-8 h-8 text-mint-selected" />
               </div>
               <h4 className="font-heading text-lg font-bold text-card-foreground mb-2">
                 {feature.title}

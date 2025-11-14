@@ -33,18 +33,21 @@ const About = () => {
           </h2>
           <p className="text-lg text-foreground/90 leading-relaxed mb-6 font-medium">
             Dasens is the parent company behind{" "}
-            <span className="font-semibold text-mint">InventGenie</span> and{" "}
-            <span className="font-semibold text-mint">SmartsRED</span> — two ventures transforming
-            R&D and clean technology worldwide.
+            <span className="font-semibold text-mint-selected">InventGenie</span>, an AI-powered patent drafting 
+            platform that transforms ideas into ready-to-file patent applications. From concept to IP, instantly. 
+            And <span className="font-semibold text-mint-selected">SmartSRED</span>, an AI-powered SR&ED tax credit 
+            platform that streamlines claims, maximizes returns, and ensures audit-ready compliance for Canadian companies.
           </p>
           <p className="text-lg text-foreground/90 leading-relaxed mb-6 font-medium">
             With expertise spanning engineering, innovation strategy, and sustainability, we transform
-            ideas into scalable solutions that create measurable impact.
+            ideas into scalable solutions that create measurable impact through cutting-edge AI technology 
+            and deep domain expertise.
           </p>
-          <div className="bg-mint/10 border-l-4 border-mint/50 p-6 rounded-lg backdrop-blur-sm">
+          <div className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2">
             <p className="font-semibold text-lg text-foreground">
-              <span className="text-mint">Mission:</span> To accelerate global innovation by
-              bridging research, technology, and sustainable industrial practice.
+              <span className="text-mint-selected">Mission:</span> To accelerate global innovation by
+              bridging research, technology, and sustainable industrial practice through AI-powered 
+              platforms that transform ideas into intellectual property and maximize R&D tax credits.
             </p>
           </div>
         </div>
@@ -57,9 +60,9 @@ const About = () => {
             {focusAreas.map((area, index) => (
               <div
                 key={index}
-                className="bg-white/20 backdrop-blur-sm p-6 rounded-lg border border-mint/20 hover:border-mint/40 transition-all duration-300"
+                className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2"
               >
-                <area.icon className="w-12 h-12 text-mint mb-4" />
+                <area.icon className="w-12 h-12 text-mint-selected mb-4" />
                 <h4 className="font-heading text-lg font-bold text-card-foreground mb-2">
                   {area.title}
                 </h4>

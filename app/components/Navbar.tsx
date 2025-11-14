@@ -57,7 +57,7 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-foreground hover:text-mint transition-colors font-medium"
+                className="text-foreground hover:text-mint-selected transition-colors font-medium"
               >
                 {link.label}
               </button>
@@ -82,7 +82,7 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-foreground hover:text-mint transition-colors font-medium text-left"
+                className="text-foreground hover:text-mint-selected transition-colors font-medium text-left"
               >
                 {link.label}
               </button>

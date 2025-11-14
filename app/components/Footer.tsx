@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Logo and Brand */}
           <div className="space-y-4">
             <button
@@ -45,62 +45,12 @@ const Footer = () => {
               <img 
                 src={dasensLogo.src} 
                 alt="Dasens - AI Powered Innovation Assistant" 
-                className="h-28 w-auto"
+                className="h-16 w-auto"
               />
             </button>
             <p className="text-foreground/70 text-sm leading-relaxed font-medium">
               Empowering Innovation. Engineering the Future.
             </p>
-            <div className="space-y-3 pt-4">
-              <div className="flex items-center gap-3">
-                <a
-                  href="https://www.linkedin.com/in/simonpark007/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-mint/20 hover:bg-mint/30 flex items-center justify-center transition-all hover:scale-110 shrink-0"
-                  aria-label="Founder LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5 text-mint" />
-                </a>
-                <span className="text-foreground/70 text-sm font-medium">Founder</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <a
-                  href="https://www.linkedin.com/company/dasens-ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-mint/20 hover:bg-mint/30 flex items-center justify-center transition-all hover:scale-110 shrink-0"
-                  aria-label="Dasens AI LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5 text-mint" />
-                </a>
-                <span className="text-foreground/70 text-sm font-medium">Dasens AI</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <a
-                  href="https://www.linkedin.com/company/inventgenie/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-mint/20 hover:bg-mint/30 flex items-center justify-center transition-all hover:scale-110 shrink-0"
-                  aria-label="InventGenie LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5 text-mint" />
-                </a>
-                <span className="text-foreground/70 text-sm font-medium">InventGenie</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <a
-                  href="https://www.linkedin.com/company/smartsred/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-mint/20 hover:bg-mint/30 flex items-center justify-center transition-all hover:scale-110 shrink-0"
-                  aria-label="SmartSRED LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5 text-mint" />
-                </a>
-                <span className="text-foreground/70 text-sm font-medium">SmartSRED</span>
-              </div>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -111,7 +61,7 @@ const Footer = () => {
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-foreground/70 hover:text-mint transition-colors text-sm font-medium hover:translate-x-1 transform duration-200 flex items-center gap-2 group"
+                    className="text-foreground/70 hover:text-mint-selected transition-colors text-sm font-medium hover:translate-x-1 transform duration-200 flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-mint/40 group-hover:bg-mint transition-colors"></span>
                     {link.label}
@@ -123,6 +73,7 @@ const Footer = () => {
 
           {/* Ventures */}
           <div>
+            <h3 className="font-bold text-lg mb-4 text-foreground">Our Ventures</h3>
             <ul className="space-y-4">
               {ventures.map((venture, index) => (
                 <li key={index}>
@@ -143,22 +94,77 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* LinkedIn */}
+          <div>
+            <h3 className="font-bold text-lg mb-4 text-foreground">Connect</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3">
+                <a
+                  href="https://www.linkedin.com/in/simonpark007/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-mint/20 hover:bg-mint/30 flex items-center justify-center transition-all hover:scale-110 shrink-0"
+                  aria-label="Founder LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5 text-mint-selected" />
+                </a>
+                <span className="text-foreground/70 text-sm font-medium">Founder</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <a
+                  href="https://www.linkedin.com/company/dasens-ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-mint/20 hover:bg-mint/30 flex items-center justify-center transition-all hover:scale-110 shrink-0"
+                  aria-label="Dasens AI LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5 text-mint-selected" />
+                </a>
+                <span className="text-foreground/70 text-sm font-medium">Dasens AI</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <a
+                  href="https://www.linkedin.com/company/inventgenie/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-mint/20 hover:bg-mint/30 flex items-center justify-center transition-all hover:scale-110 shrink-0"
+                  aria-label="InventGenie LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5 text-mint-selected" />
+                </a>
+                <span className="text-foreground/70 text-sm font-medium">InventGenie</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <a
+                  href="https://www.linkedin.com/company/smartsred/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-mint/20 hover:bg-mint/30 flex items-center justify-center transition-all hover:scale-110 shrink-0"
+                  aria-label="SmartSRED LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5 text-mint-selected" />
+                </a>
+                <span className="text-foreground/70 text-sm font-medium">SmartSRED</span>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact Info */}
           <div>
             <h3 className="font-bold text-lg mb-4 text-foreground">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-mint/60 mt-0.5 shrink-0" />
+                <MapPin className="w-5 h-5 text-mint-selected/60 mt-0.5 shrink-0" />
                 <div>
                   <p className="text-foreground/70 text-sm font-medium">Calgary, Alberta</p>
                   <p className="text-foreground/50 text-xs">Canada (Global Operations)</p>
                 </div>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-mint/60 shrink-0" />
+                <Mail className="w-5 h-5 text-mint-selected/60 shrink-0" />
                 <a
                   href="mailto:info@inventgenie.com"
-                  className="text-foreground/70 hover:text-mint text-sm font-medium transition-colors"
+                  className="text-foreground/70 hover:text-mint-selected text-sm font-medium transition-colors"
                 >
                   info@inventgenie.com
                 </a>

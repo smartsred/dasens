@@ -32,10 +32,11 @@ const CleanEnergy = () => {
             Engineering a Sustainable Future
           </h2>
           <p className="text-lg text-foreground/90 leading-relaxed font-medium">
-            At Dasens, sustainability is built into everything we do. Through ventures like{" "}
-            <span className="font-semibold text-mint">SmartsRED</span>, we develop IoT-enabled,
-            sensor-driven systems that reduce emissions, improve efficiency, and enable the global
-            transition to renewable power.
+            At Dasens, sustainability is built into everything we do. Through our venture{" "}
+            <span className="font-semibold text-mint-selected">SmartSRED</span>, an AI-powered SR&ED tax credit 
+            platform that streamlines claims, maximizes returns, and ensures audit-ready compliance for 
+            Canadian companies, we help organizations optimize their R&D investments in clean energy 
+            and sustainable technologies, enabling the global transition to renewable power.
           </p>
         </div>
 
@@ -47,10 +48,10 @@ const CleanEnergy = () => {
             {impactAreas.map((area, index) => (
               <div
                 key={index}
-                className="bg-white/20 backdrop-blur-sm p-6 rounded-lg border border-mint/20 hover:border-mint/40 transition-all duration-300 text-center"
+                className="bg-white shadow-lg p-6 rounded-lg transition-transform duration-300 hover:-translate-y-2 text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-mint/10 mb-4">
-                  <area.icon className="w-8 h-8 text-mint" />
+                  <area.icon className="w-8 h-8 text-mint-selected" />
                 </div>
                 <h4 className="font-heading text-lg font-bold text-card-foreground mb-2">
                   {area.title}
