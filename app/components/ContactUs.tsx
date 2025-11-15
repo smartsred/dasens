@@ -6,7 +6,7 @@ import { MapPin, Mail, Linkedin } from "lucide-react";
 const ContactUs = () => {
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white via-white to-white dark:from-mint dark:via-black dark:to-black">
+    <section id="contact" className="py-24 bg-gradient-to-b from-mint via-white to-white dark:from-mint dark:via-black dark:to-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
